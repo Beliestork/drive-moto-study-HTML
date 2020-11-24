@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>DRIVE MOTO - интернет магазин</title>
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/slick.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <nav class="header__super-nav">
+          <ul class="header__super-nav-list">
+            <li><a class="header__super-nav-link" href="#">Магазины</a></li>
+            <li><a class="header__super-nav-link" href="#">Акции</a></li>
+            <li><a class="header__super-nav-link" href="#">Доставка и оплата</a></li>
+          </ul>
+        </nav>
+        <div class="header__logo">
+          <a href="#">
+            <img class="header__logo-img" src="./images/drive-moto-logo.svg" alt="Drive Moto - интернет магазин надводной техники"/>
+          </a>
+        </div>
+        <div class="header__panel">
+          <a class="header__panel-adress">Москва, ул. Науки 25</a>
+          <ul class="header__panel-btn-list">
+            <li>
+              <a class="header__panel-btn header__panel-btn--whishlist" href="#">
+                <img src="./images/whishlist.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a class="header__panel-btn header__panel-btn--auth" href="#">
+                <img src="./images/auth.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a class="header__panel-btn header__panel-btn--backet" href="#">
+                <img src="./images/backet.svg" alt="">
+                <p class="amount-items header__backet-items">1</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <nav class="header__categories">
+          <ul class="header__categories-list">
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Квадроциклы</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Катера</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Гидроциклы</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Лодки</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Вездеходы</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Снегоходы</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Двигатели</a></li>
+            <li class="header__categories-list-item"><a class="header__categories-link" href="#">Запчасти</a></li>
+          </ul>
+        </nav>  
+      </div>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="banner__inner">
+        <div class="banner__slider js-slick-banner">
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1.jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1(small-size).jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1(no-proportion).jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1.jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1.jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+          <a class="banner__slider-item" href="#">
+            <img class="banner__slider-img" src="./images/tmp/banner-slide-1.jpg" alt="Почувствуй скорость и экстрим вместе с Drive Moto">
+          </a>
+        </div>
+        <a class="banner__special-offer" href="#special-offer">
+          <p class="sale-label banner__sale-label">АКЦИЯ</p>
+          <div class="banner__special-offer-cost">
+            <p class="banner__special-offer-price banner__special-offer-price--new">
+              <span class="banner__special-offer-price-value">190 000</span>
+              <span class="currency currency--rub-blue banner__special-offer-curr"></span>
+            </p>
+            <p class="banner__special-offer-price banner__special-offer-price--old">
+              <span class="banner__special-offer-price-value banner__special-offer-price-value--old">255 000</span>
+              <span class="currency currency--rub-gray banner__special-offer-curr"></span>
+            </p>
+          </div>
+          <div class="banner__special-offer-imageBx">
+            <img class="banner__special-offer-image" src="./images/tmp/special-offer-img.png" alt="Товар по специальной цене!">
+          </div>
+          <h3 class="banner__special-offer-title">
+            Лодочный мотор Suzuki DF9.9BRS
+          </h3>
+          <p class="banner__special-offer-sale-end">
+            Акция действует до <span class="banner__special-offer-date number-hightlight">31.08.2020</span>
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
