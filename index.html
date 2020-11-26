@@ -121,6 +121,32 @@
     </div>
   </section>
 
+  <div class="category-search js-category-search">
+    <div class="container">
+      <div class="category-search__inner">
+        <div class="category-search__tabs">
+          <button class="category-search__tab js-category-search-tab" data-category-tab-for="js-category-search-form-1">Поиск по номеру</button>
+          <button class="category-search__tab category-search__tab--active js-category-search-tab" data-category-tab-for="js-category-search-form-2">Поиск по марке</button>
+          <button class="category-search__tab js-category-search-tab" data-category-tab-for="js-category-search-form-3">Поиск по названию товара</button>
+        </div>
+        <div class="category-search__content">
+          <form class="category-search__form js-category-search-form" id="js-category-search-form-1" action="#find-by-number" method="POST">
+            <input class="category-search__input" type="text" placeholder="Введите номер">
+            <button class="category-search__submit" type="submit">Искать</button>
+          </form>
+          <form class="category-search__form category-search__form--active js-category-search-form" id="js-category-search-form-2" action="#find-by-brand" method="POST">
+            <input class="category-search__input" type="text" placeholder="Введите марку">
+            <button class="category-search__submit" type="submit">Искать</button>
+          </form>
+          <form class="category-search__form js-category-search-form" id="js-category-search-form-3" action="#find-by-name" method="POST">
+            <input class="category-search__input" type="text" placeholder="Введите название товара">
+            <button class="category-search__submit" type="submit">Искать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/main.js"></script>

@@ -284,7 +284,6 @@ img {
     display: flex;
     justify-content: space-between;
     padding-top: 70px;
-    margin-bottom: 1000px;
 }
 
 .banner__slider {
@@ -340,6 +339,8 @@ img {
 .banner__slider-arrow--next:hover {
     transform: scale(-1.2, 1.2);
 }
+
+/* ||SALE-OFFER IN BANNER SECTION */
 
 .sale-offer {
     position: relative;
@@ -426,4 +427,88 @@ img {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
     line-height: 22px;
+}
+
+/* ||CATEGORY-SEARCH */
+
+.category-search {
+    padding: 77px 0px 80px;
+}
+
+.category-search__tabs {
+    font: 400 20px/24px 'SF-Regular', sans-serif;
+    color: #2F3035;
+}
+
+.category-search__tab {
+    padding: 12px 26px;
+    cursor: pointer;
+}
+
+.category-search__tab:not(.category-search__tab--active) {
+    transition: background-color 200ms linear;
+}
+
+.category-search__tab:not(.category-search__tab--active):focus,
+.category-search__tab:not(.category-search__tab--active):hover {
+    background-color: #f3f3f9;
+}
+
+.category-search__tab--active {
+    font-weight: 600;
+    font-family: 'SF-Bold', sans-serif;
+    background: #f0f0f4;
+    border-radius: 4px;
+}
+
+.category-search__content {
+    position: relative;
+    margin-top: 25px;
+}
+
+.category-search__form {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    visibility: hidden;
+}
+
+.category-search__input {
+    display: inline-block;
+    width: 100%;
+    font: 400 16px/19px "SF-Regular", sans-serif;
+    color: #656464;
+    padding: 15px 20px;
+    border: 0px;
+    outline: 0;
+    border-radius: 3px;
+    background: #f0f0f4;
+}
+
+.category-search__submit {
+    margin-left: -5px;
+    padding: 17px 40px;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'SF-Semibold', sans-serif;
+    line-height: 17px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #fff;
+    background: #1c62cd;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+}
+
+.category-search__submit:focus,
+.category-search__submit:hover {
+    background-color: #1953ad;
+}
+
+.category-search__form--active {
+    visibility: visible
 }
