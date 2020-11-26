@@ -464,16 +464,21 @@ img {
 .category-search__content {
     position: relative;
     margin-top: 25px;
+    min-height: 50px;
 }
 
 .category-search__form {
     position: absolute;
     top: 0px;
-    left: 0;
+    left: 0px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
     visibility: hidden;
+}
+
+.category-search__form--active {
+    visibility: visible;
 }
 
 .category-search__input {
@@ -509,6 +514,110 @@ img {
     background-color: #1953ad;
 }
 
-.category-search__form--active {
-    visibility: visible
+
+/* ||CATAGORY-PICKER */
+
+.category-picker__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
 }
+
+.category-picker__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+    height: 130px;
+    padding: 20px 0px 14px 20px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    transition: box-shadow 300ms ease-out;
+}
+
+.category-picker__item:focus,
+.category-picker__item:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+}
+
+.category-picker__title {
+    color: #2f3035;
+    font: bold 24px/28px 'SF-Bold', sans-serif;
+    transition: color 250ms linear;
+}
+
+.category-picker__item:focus .category-picker__title,
+.category-picker__item:hover .category-picker__title {
+    color: #1c62cd;
+}
+
+.category-picker__image {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    max-width: 100%;
+}
+
+.category-picker__image--kvadro {
+    top: 22px;
+    right: 37px;
+}
+
+.category-picker__image--gidro {
+    top: 25px;
+    right: 25px;
+}
+
+.category-picker__image--ships {
+    top: 13px;
+    right: 6px;
+}
+
+.category-picker__image--snowmobile {
+    top: 11px;
+    right: 20px;
+}
+
+.category-picker__image--cross {
+    top: 15px;
+    right: 23px;
+}
+
+.category-picker__image--motors {
+    top: 7px;
+    right: 77px;
+}
+
+.category-picker__text {
+    position: relative;
+    display: inline-block;
+    color: #c4c4c4;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0px;
+    vertical-align: middle;
+    transition: color 250ms linear;
+}
+
+.category-picker__text::after {
+    content: url('../images/more-arrow.svg');
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    transition: margin-left 250ms linear;
+}
+
+
+.category-picker__item:focus .category-picker__text,
+.category-picker__item:hover .category-picker__text {
+    color: #ababab;
+}
+
+
+.category-picker__item:focus .category-picker__text::after,
+.category-picker__item:hover .category-picker__text::after {
+    margin-left: 6px;
+}
+
