@@ -35,7 +35,7 @@
           <ul class="header__panel-btn-list">
             <li>
               <a class="header__panel-btn header__panel-btn--whishlist" href="#">
-                <img src="./images/whishlist.svg" alt="">
+                <img src="./images/heart.svg" alt="">
               </a>
             </li>
             <li>
@@ -121,24 +121,25 @@
     </div>
   </section>
 
+  <!-- CATEGORY SEARCH -->
   <div class="category-search js-category-search">
     <div class="container">
-      <div class="category-search__inner">
+      <div class="category-search__inner js-tab-isolate">
         <div class="category-search__tabs">
-          <button class="category-search__tab js-category-search-tab" data-category-tab-for="js-category-search-form-1">Поиск по номеру</button>
-          <button class="category-search__tab category-search__tab--active js-category-search-tab" data-category-tab-for="js-category-search-form-2">Поиск по марке</button>
-          <button class="category-search__tab js-category-search-tab" data-category-tab-for="js-category-search-form-3">Поиск по названию товара</button>
+          <button class="category-search__tab js-tab" data-tab-for="js-category-search-form-1">Поиск по номеру</button>
+          <button class="category-search__tab js-tab js-tab--active" data-tab-for="js-category-search-form-2">Поиск по марке</button>
+          <button class="category-search__tab js-tab" data-tab-for="js-category-search-form-3">Поиск по названию товара</button>
         </div>
         <div class="category-search__content">
-          <form class="category-search__form js-category-search-form" id="js-category-search-form-1" action="#find-by-number" method="POST">
+          <form class="category-search__form js-tab-content" id="js-category-search-form-1" action="#find-by-number" method="POST">
             <input class="category-search__input" type="text" placeholder="Введите номер">
             <button class="category-search__submit" type="submit">Искать</button>
           </form>
-          <form class="category-search__form category-search__form--active js-category-search-form" id="js-category-search-form-2" action="#find-by-brand" method="POST">
+          <form class="category-search__form js-tab-content js-tab-content--active" id="js-category-search-form-2" action="#find-by-brand" method="POST">
             <input class="category-search__input" type="text" placeholder="Введите марку">
             <button class="category-search__submit" type="submit">Искать</button>
           </form>
-          <form class="category-search__form js-category-search-form" id="js-category-search-form-3" action="#find-by-name" method="POST">
+          <form class="category-search__form js-tab-content" id="js-category-search-form-3" action="#find-by-name" method="POST">
             <input class="category-search__input" type="text" placeholder="Введите название товара">
             <button class="category-search__submit" type="submit">Искать</button>
           </form>
@@ -147,6 +148,7 @@
     </div>
   </div>
 
+  <!-- CATEGORY PICKER -->
   <section class="category-picker">
     <div class="container">
       <div class="category-picker__inner">
@@ -182,6 +184,971 @@
         </a>
       </div>
     </div>    
+  </section>
+
+  <section class="products products--popular">
+    <div class="container">
+      <div class="products__inner js-tab-isolate">
+        <h2 class="products__title">Популярные товары</h2>
+        <div class="products__tabs">
+          <button class="products__tab js-tab js-tab--active" data-tab-for="js-popular-product-1">запчасти</button>
+          <button class="products__tab js-tab" data-tab-for="js-popular-product-2">моторы</button>
+          <button class="products__tab js-tab" data-tab-for="js-popular-product-3">шины</button>
+          <button class="products__tab js-tab" data-tab-for="js-popular-product-4">электроника</button>
+          <button class="products__tab js-tab" data-tab-for="js-popular-product-5">инструменты</button>
+          <button class="products__tab js-tab" data-tab-for="js-popular-product-6">аксессуары</button>
+        </div>
+        <div class="products__contents">
+          <div class="products__items js-tab-content js-tab-content--active" id="js-popular-product-1">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-2.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-6.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#zapchasti">Показать еще</a>
+            </div>
+          </div>
+          <!-- ПРОДУКТЫ 2 -->
+          <div class="products__items js-tab-content" id="js-popular-product-2">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-3.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-4.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#motori">Показать еще</a>
+            </div>
+          </div>
+          <!-- ПРОДУКТЫ 3 -->
+          <div class="products__items js-tab-content" id="js-popular-product-3">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-2.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-6.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-2.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-3.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#shini">Показать еще</a>
+            </div>
+          </div>
+          <!-- ПРОДУКТЫ 4 -->
+          <div class="products__items js-tab-content" id="js-popular-product-4">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-6.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#electronik">Показать еще</a>
+            </div>
+          </div>
+          <!-- ПРОДУКТЫ 5 -->
+          <div class="products__items js-tab-content" id="js-popular-product-5">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-2.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-6.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#tools">Показать еще</a>
+            </div>
+          </div>
+          <!-- ПРОДУКТЫ 6 -->
+          <div class="products__items js-tab-content" id="js-popular-product-6">
+            <div class="products__items-slider js-slick-product-popular">
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-2.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Водонепроницаемый Рюкзак</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">9 800</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-1.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательный жилет BRP Men's Airflow PFD</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">6 900</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-6.png" alt="Картинка товара">
+                    <h4 class="product-card__title">BRP Audio-Premium System</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">68 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--no-more">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card product-card--sale">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-5.png" alt="Картинка товара">
+                    <h4 class="product-card__title">Спасательное снаряжение</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">1 000</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-card__content">
+                  <a class="product-card__link" href="#product">
+                    <img class="product-card__image" src="./images/tmp/product-7.png" alt="Картинка товара">
+                    <h4 class="product-card__title">RF D.E.S.S.TM Key</h4>              
+                    <p class="product-card__hover-element">посмотреть товар</p>
+                  </a>
+                  <div class="product-card__info">
+                    <div class="product-card__cost">
+                      <p class="product-card__price">
+                        <span class="product-card__price-value">3 200</span>
+                        <span class="currency product-card__currency">₽</span>
+                      </p>
+                    </div>
+                    <div class="product-card__no-more">
+                      <p class="product-card__no-more-text">нет в наличии</p>
+                      <a class="product-card__inform" href="#inform">Сообщить о поступлении</a>
+                    </div>
+                  </div>
+                  <button class="heart product-card__heart"></button>
+                  <button class="add-to-card product-card__to-backet">
+                    <img class="add-to-card__icon" src="./images/backet-white.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products__show-more-link-wrapper">
+              <a class="products__show-more-link" href="#accessories">Показать еще</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
