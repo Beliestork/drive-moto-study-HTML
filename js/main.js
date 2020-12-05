@@ -8,7 +8,7 @@
         infinite: true,
     });
 
-    $('.js-slick-product-popular').slick({
+    $('.js-slick-products').slick({
         dots: false,
         infinite: true,
         slidesToShow: 4,

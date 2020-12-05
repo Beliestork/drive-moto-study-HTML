@@ -743,6 +743,10 @@ img {
     text-align: center;
 }
 
+.products--buy-with .products__show-more-link-wrapper {
+    display: none;
+}
+
 .products__show-more-link {
     display: inline-block;
     text-transform: uppercase;
@@ -941,4 +945,55 @@ img {
 
 .products__contents {
     margin-top: 25px;
+}
+
+/* SALE-BANNER (NOT JUST IMAGE) */
+
+.sale-banner__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 165px;
+    padding: 30px 0px 30px 445px;
+    background-color: #1c62cd;
+    color: #fff;
+}
+
+.sale-banner__img {
+    position: absolute;
+    left: 70px;
+    top: 32px;
+}
+
+.sale-banner__text {
+    font-weight: 700;
+    font-family: 'SF-Bold', sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    max-width: 280px;
+    margin: 0px;
+}
+
+.sale-banner__text-highlight {
+    display: block;
+    text-transform: uppercase;
+}
+
+.sale-banner__btn {
+    width: 284px;
+    line-height: 50px;
+    font-size: 24px;
+    margin-left: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2f3035;
+    background-color: #fff;
+    border: 3px solid #fff;
+    transition: background-color 240ms linear, color 240ms linear;
+}
+
+.sale-banner__btn:focus,
+.sale-banner__btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
