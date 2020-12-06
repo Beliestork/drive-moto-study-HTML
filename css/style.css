@@ -743,6 +743,10 @@ img {
     text-align: center;
 }
 
+.products--buy-with .products__show-more-link-wrapper {
+    display: none;
+}
+
 .products__show-more-link {
     display: inline-block;
     text-transform: uppercase;
@@ -941,4 +945,130 @@ img {
 
 .products__contents {
     margin-top: 25px;
+}
+
+/* SALE-BANNER */ 
+
+.sale-banner__image {
+    transition: filter 200ms linear;
+}
+
+.sale-banner__link:focus .sale-banner__image,
+.sale-banner__link:hover .sale-banner__image {
+    filter: contrast(1.05) brightness(0.95);
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #f0f0f4;
+    padding: 40px 0px 27px;
+}
+
+.footer__top {
+    display: flex;
+}
+
+.footer__subscribe {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer__subscribe-title {
+    max-width: 220px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    font-family: 'SF-Bold', sans-serif;
+}
+
+.footer__subscribe-form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__subscribe-email {
+    width: 200px;
+    background-color: #fff;
+    padding: 8px 24px 8px 12px;
+    border: 0;
+}
+
+.footer__subscribe-email::placeholder {
+    color: #c4c4c4;
+}
+
+.footer__subscribe-btn {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    font-family: 'SF-Semibold', sans-serif;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1c62cd;
+    padding: 0px 15px;
+    cursor: pointer;
+    transition: background-color 240ms linear;
+}
+
+.footer__subscribe-btn:focus,
+.footer__subscribe-btn:hover {
+    background-color: #1953ad;
+}
+
+.footer__menu {
+    display: flex;
+    margin-left: 160px;
+    max-width: 370px;
+    width: 100%;
+    font: 400 14px/17px 'SF-Regular', sans-serif;
+}
+
+.footer__menu-title {
+    font-weight: 700;
+    font-family: 'SF-Bold', sans-serif;
+}
+
+.footer__nav-item {
+    margin: 3px 0px;
+    max-width: 80%;
+}
+
+.footer__menu-item {
+    width: 50%;
+}
+
+.footer__nav-link:focus,
+.footer__nav-link:hover {
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.footer__social-item {
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.footer__bottom {
+    font-size: 10px;
+    line-height: 12px;
+    color: #48494d;
+    margin-top: 30px;
+    margin-left: 468px;
+}
+
+.footer__bottom-link:first-child {
+    margin-right: 80px;
+}
+
+.footer__bottom-link:focus,
+.footer__bottom-link:hover {
+    text-decoration: underline;
 }
