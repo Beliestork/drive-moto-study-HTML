@@ -229,4 +229,19 @@
         });
     }
     /* .End */
+
+    /* Звездный рейтинг */
+    const starRateElement = document.querySelector('.js-star-rate');
+
+    if (starRateElement) {
+        const amounFilledStar = starRateElement.dataset.starFill;
+        const starElements = starRateElement.querySelectorAll('.js-star-rate__entity');
+
+        for (let i = 0; i < amounFilledStar; i++) {
+            if (i + 1 > starElements.length) break;
+
+            starElements[i].classList.add('star-rate__entity--filled');
+        }
+    }
+    /* .End */
 })(document);
