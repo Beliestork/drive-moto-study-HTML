@@ -112,24 +112,26 @@
     /* .End */
 
     /* Filter Range */
-        const updateRangeLabels = function(min, max) {
-            document.querySelector('.js-range-slider-min-value').textContent = min;
-            document.querySelector('.js-range-slider-max-value').textContent = max;
-        }
-
-        $(".js-range-slider").ionRangeSlider({
-            type: 'double',
-            skin: 'round',
-            grid: false,
-            hide_min_max: true,
-            hide_from_to: true,
-            onStart: function(data) {
-                updateRangeLabels(data.from_pretty, data.to_pretty);
-            },
-            onChange: function(data) {
-                updateRangeLabels(data.from_pretty, data.to_pretty);
+        if (jQuery().ionRangeSlider) {
+            const updateRangeLabels = function(min, max) {
+                document.querySelector('.js-range-slider-min-value').textContent = min;
+                document.querySelector('.js-range-slider-max-value').textContent = max;
             }
-        });
+
+            $(".js-range-slider").ionRangeSlider({
+                type: 'double',
+                skin: 'round',
+                grid: false,
+                hide_min_max: true,
+                hide_from_to: true,
+                onStart: function(data) {
+                    updateRangeLabels(data.from_pretty, data.to_pretty);
+                },
+                onChange: function(data) {
+                    updateRangeLabels(data.from_pretty, data.to_pretty);
+                }
+            });
+        }
     /* .End */
 
 

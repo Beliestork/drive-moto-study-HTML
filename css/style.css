@@ -150,6 +150,16 @@ img {
     cursor: pointer;
 }
 
+.compares {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 27px;
+    background: url('../images/icon-compares.svg') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
 .heart {
     position: relative;
     width: 24px;
@@ -1717,4 +1727,206 @@ img {
     text-decoration: underline;
     color: #2f3035;
     margin-left: 8px;
+}
+
+/* Styles for individual product page */
+
+.product-page__offer {
+    display: flex;
+}
+
+.preview-product__image {   
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.compares {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 27px;
+    background: url('../images/icon-compares.svg') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.product-page__compares-btn {
+    vertical-align: bottom;
+    margin: 0px 20px 0px 25px;
+}
+
+.product-page__content:not(.js-tab-content--active) {
+    display: none;
+}
+
+.product-page__price-block {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.product-page__price-old,
+.product-page__price {
+    font-family: 'Barlow', sans-serif;
+    
+}
+
+.product-page__price-old {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 36px;
+    color: #666;
+    margin: 18px 0px 0px;
+}
+
+.product-page__price-old::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0px;
+    transform: rotate(-9deg);
+    background-color: #666;
+}
+
+.product-page__price {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    margin: 5px 0px 17px;
+}
+
+.producs-offer__offprice {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1c62cd;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+.producs-offer__offprice > *:first-child:hover {
+    border-bottom: 1px solid #1c62cd;
+}
+
+.product-page__price-block--sale::after {
+    content: "SALE";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: 'SF-Regular', sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    color: #fff;
+    padding: 13px 25px;
+    background-color: #1c62cd;
+    border-radius: 3px;
+}
+
+.product-page__title {
+    font-family: 'SF-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.product-page__code {
+    font-size: 15px;
+    line-height: 18px;
+    color: #666;
+    margin: 15px auto 17px;
+}
+
+.product-page__preview {
+    padding-top: 60px;
+}
+
+.product-page__quick-info {
+    margin-top: 45px;
+    max-width: 436px;
+}
+
+.product-page__tab {
+    font-size: 20px;
+    line-height: 24px;
+    color: #666;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.product-page__tab:nth-of-type(1n + 2) {
+    margin-left: 34px;
+}
+
+.product-page__tab:focus,
+.product-page__tab:hover {
+    border-bottom-color: #1c62cd;
+}
+
+.product-page__tab.js-tab--active {
+    font-family: 'SF-Bold', sans-serif;
+    font-weight: 700;
+    color: inherit;
+    border-bottom-color: #1c62cd;
+}
+
+.product-page__table {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    border-collapse: collapse;
+}
+
+.product-page__table td {
+    padding: 15px 10px 6px 0px;
+    border-bottom: 1px solid #ededed;
+}
+
+.product-page__table tr td:first-child {
+    width: 70%;
+}
+
+.product-page__table tr td:last-child {
+    width: 30%;
+}
+
+.product-page__show-more {
+    display: inline-block;
+    color: #1c62cd;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button-buy {
+    border-radius: 3px;
+    background-color: #1C62CD;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 17px 53px 16px;
+    transition: background-color 300ms linear;
+    cursor: pointer;
+}
+
+.button-buy:focus,
+.button-buy:hover {
+    background-color: #1953ad;
+}
+
+.product-page__button-buy {
+    margin-top: 40px;
 }
