@@ -1953,3 +1953,239 @@ img {
 .product-page__button-buy {
     margin-top: 40px;
 }
+
+/* БЛОК С ПОЛНОЙ ИНФОРМАЦИЕЙ О ПРОДУКТЕ */
+
+.product-info-block {
+    margin-top: 80px;
+}
+
+.product-info-block__tabs {
+    display: flex;
+    justify-content: space-between;
+    background: #f0f0f4;
+    padding: 22px 36px 22px;
+}
+
+.product-info-block__tab {
+    position: relative;
+    font-size: 20px;
+    line-height: 24px;
+    color: #7c7d81;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.product-info-block__tab::after { 
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+}
+
+.product-info-block__tab:hover::after,
+.product-info-block__tab.js-tab--active::after {
+    background-color: #1c62cd;
+}
+
+.product-info-block__contents {
+    width: 100%;
+}
+
+.product-info-block__content:not(.js-tab-content--active) {
+    display: none;
+}
+
+.product-info-block__pickup {
+    padding-top: 50px;
+}
+
+.product-pickup__form {
+    display: flex;
+    align-items: center;
+}
+
+.product-pickup__options {
+    display: flex;
+    align-items: center;
+    margin-left: 155px;
+}
+
+.product-pickup__checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 54px;
+}
+
+.product-pickup__checkbox:last-child {
+    margin-right: 0px;
+}
+
+.product-pickup__checkbox .input-replacer__label-text {
+    color: #7c7d81;;
+    font-size: 17px;
+    line-height: 20px;
+    transition: color 200ms linear;
+}
+
+.product-pickup__checkbox:hover .input-replacer__label-text {
+    color: #2f3035;
+}
+
+.product-pickup__checkbox .input-replacer__input-view {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.product-pickup__checkbox .input-replacer__input-view::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+}
+
+.product-pickup__checkbox .input-replacer__input-unview:checked ~ .input-replacer__input-view {
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid #1c62cd;
+}
+
+.product-pickup__checkbox .input-replacer__input-unview:checked ~ .input-replacer__input-view::after {
+    background-color: #1c62cd;
+}
+
+.find-magazine {
+    display: flex;
+    align-items: center;
+}
+
+.find-magazine__label {
+    margin-right: 17px;
+    color: #7c7d81;
+}
+
+/* SEARCH-GRAY */
+
+.search-gray {
+    position: relative;
+    width: 314px;
+}
+
+.search-gray::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url('../images/icon-search.svg') no-repeat center;
+    background-size: contain;
+}
+
+.search-gray__input {
+    width: 100%;
+    background: #f0f0f4;
+    padding: 8px 40px 8px 17px;
+    border: 0;
+    border-radius: 3px;
+}
+
+/* CUSTOM TABLE */
+.custom-table {
+    display: block;
+    width: 100%;
+}
+
+.custom-table__heads {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.custom-table__head {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.custom-table__col {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.custom-table__contents p {
+    margin: 0px;
+}
+
+.custom-table__row {
+    display: flex;
+    padding: 20px 0px;
+    border-bottom: 1px solid #f0f0f4;
+}
+
+/* PICKUP TABLE MODIFE CUSTOM TABLE */
+.product-pickup__table {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.product-pickup__contents p {
+    color: #7c7d81;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.product-pickup__col--work-time p {
+    margin-bottom: 8px;
+}
+
+.product-pickup__col--work-time p:last-child {
+    margin-bottom: 0px;
+}
+
+.product-pickup__col--work-time p span:first-child {
+    display: inline-block;
+    width: 55px;
+}
+
+.product-pickup__col:nth-of-type(1) {
+    width: 320px;
+    padding-right: 40px;
+}
+
+.product-pickup__col:nth-of-type(2) {
+    width: 250px;
+}
+
+.product-pickup__col:nth-of-type(3) {
+    width: 215px;
+}
+
+.product-pickup__col:nth-of-type(4) {
+    width: 215px;
+}
+
+.product-pickup__col:nth-of-type(5) {
+    width: auto;
+    margin-left: auto;
+}
+
+.product-pickup__col--buy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(-25%);
+}
+
+.product-pickup__button-buy {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.12em;
+    padding: 10px 40px 9px;
+}
