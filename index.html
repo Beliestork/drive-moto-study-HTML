@@ -13,11 +13,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+  <style>
+    section:not(.banner), .category-search,
+    .sale-banner, .footer  {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="header__top">
+        <div class="hamb header__hamb js-side-menu-mob-trigger">
+          <div class="hamb__line"></div>
+          <div class="hamb__line"></div>
+          <div class="hamb__line"></div>
+        </div>
         <nav class="header__super-nav">
           <ul class="header__super-nav-list">
             <li><a class="header__super-nav-link" href="#">Магазины</a></li>
@@ -27,11 +40,14 @@
         </nav>
         <div class="header__logo">
           <a href="#">
-            <img class="header__logo-img" src="./images/drive-moto-logo.svg" alt="Drive Moto - интернет магазин надводной техники"/>
+            <picture>
+              <source srcset="./images/drive-moto-logo-mob.svg" media="(max-width: 480px)">
+              <img class="header__logo-img" src="./images/drive-moto-logo.svg" alt="Drive Moto - интернет магазин надводной техники"/>
+            </picture>
           </a>
         </div>
         <div class="header__panel">
-          <a class="header__panel-adress">Москва, ул. Науки 25</a>
+          <a class="header__panel-adress" href="#">Москва, ул. Науки 25</a>
           <ul class="header__panel-btn-list">
             <li>
               <a class="header__panel-btn header__panel-btn--whishlist" href="#">
@@ -53,6 +69,14 @@
         </div>
       </div>
       <div class="header__bottom">
+        <nav class="header__super-nav header__super-nav--table-res">
+          <ul class="header__super-nav-list">
+            <li><a class="header__super-nav-link" href="#">Магазины</a></li>
+            <li><a class="header__super-nav-link" href="#">Акции</a></li>
+            <li><a class="header__super-nav-link" href="#">Доставка и оплата</a></li>
+          </ul>
+        </nav>
+
         <nav class="header__categories">
           <ul class="header__categories-list">
             <li class="header__categories-list-item"><a class="header__categories-link" href="#">Квадроциклы</a></li>
@@ -2178,6 +2202,60 @@
       </div>
     </div>
   </footer>
+
+  <div class="side-menu-mob js-side-menu-mob">
+    <ul class="side-menu-mob__list">
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--login">
+        <a href="#">Войти</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--login">
+        <a href="#">Регистрация</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--favorite">
+        <a href="#">Избраное</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--basket">
+        <a href="#">Корзина</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--magazine">
+        <a href="#">Магазины</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--sale">
+        <a href="#">Акции</a>
+      </li>
+      <li class="side-menu-mob__list-item side-menu-mob__list-item--icon side-menu-mob__list-item--delivery">
+        <a href="#">Доставка и оплата</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Квадроциклы</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Катера</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Гидроциклы</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Лодки</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Вездеходы</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Снегоходы</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Двигатели</a>
+      </li>
+      <li class="side-menu-mob__list-item">
+        <a href="#">Запчасти</a>
+      </li>
+
+    </ul>
+    <p class="side-menu-mob__address">
+      Москва, ул. Науки  25 
+    </p>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./js/slick.min.js"></script>

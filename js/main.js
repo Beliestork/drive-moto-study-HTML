@@ -244,4 +244,36 @@
         }
     }
     /* .End */
+
+    /* Мобильное меню */
+    const sideMenuMob = document.querySelector('.js-side-menu-mob');
+
+    if (sideMenuMob) {
+        const activeSelector = 'js-side-menu-mob--open'
+        const triggerElement = document.querySelector('.js-side-menu-mob-trigger');
+
+        const closeSideMenuMob = function() {
+            sideMenuMob.classList.remove(activeSelector);
+        };
+
+        const openSideMenuMob = function() {
+            sideMenuMob.classList.add(activeSelector);
+        };
+
+        
+
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+
+            if (!target.closest('.js-side-menu-mob')) {
+                closeSideMenuMob(); 
+            }
+        }, true);
+
+        triggerElement.addEventListener('click', function() {
+            openSideMenuMob();
+        });
+    }
+    /* .End */
+
 })(document);
