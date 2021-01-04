@@ -6,6 +6,14 @@
         nextArrow: '<button class="banner__slider-arrow banner__slider-arrow--next" type="button"></button>',
         dots: true,
         infinite: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.js-slick-products').slick({
@@ -16,6 +24,35 @@
         variableWidth: true,
         prevArrow: '<button class="products__arrow products__arrow--prev" type="button"></button>',
         nextArrow: '<button class="products__arrow products__arrow--next" type="button"></button>',
+        dotsClass: 'products__dots-slick',
+        responsive: [
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 3,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    variableWidth: false,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
     });
 
     /* Tabs */
@@ -260,7 +297,7 @@
             sideMenuMob.classList.add(activeSelector);
         };
 
-        
+
 
         document.addEventListener('click', function(e) {
             const target = e.target;
