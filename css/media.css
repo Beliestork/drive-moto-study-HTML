@@ -448,7 +448,7 @@
 
 @media screen and (max-width: 767px) {
     .header__top {
-        min-height: 80px;
+        min-height: 100px;
     }
     
     .banner__slider {
@@ -610,6 +610,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .header__top {
+        min-height: 80px;
+    } 
+
     .header__super-nav-list {
         overflow: scroll;
     }
