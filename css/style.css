@@ -224,6 +224,7 @@ img {
     position: relative;
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 .breadcrumbs-item::after {
@@ -1270,12 +1271,12 @@ img {
 
 [data-flow-type="inline"] .product-card__hover-element {
     top: 50%;
-    left: 50px;
+    left: 20px;
     transform: translateY(-50%);
     padding: 10px 5px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
-    width: 150px;
+    width: 140px;
 }
 
 [data-flow-type="inline"] .product-card--sale::before {
@@ -1408,6 +1409,10 @@ img {
     margin: 25px auto 45px;
 }
 
+.sort-filter__overflow-wrapper {
+    max-width: 100%;
+}
+
 .sort-filter__inner {
     display: flex;
     justify-content: space-between;
@@ -1482,6 +1487,10 @@ img {
     width: 290px;
     margin-right: 10px;
     flex-shrink: 0;
+}
+
+.side-filter__show-btn {
+    display: none;
 }
 
 .products-showcase {
