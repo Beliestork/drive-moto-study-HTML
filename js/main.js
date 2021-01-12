@@ -313,35 +313,50 @@
     }
     /* .End */
 
-    /* Раскрытие фильтра на на странице категории товара */
-    const sideFilter = document.querySelector('.js-side-filter');
-    const sideFilterTrigger = document.querySelector('.js-side-filter-display-btn');
+    /* Раскрыть/Свернуть элемент*/
+    const sideFilter = document.querySelector('.js-accordion');
+    const sideFilterTrigger = document.querySelector('.js-accordion-display-btn');
 
     if (sideFilter && sideFilterTrigger) {
         sideFilterTrigger.addEventListener('click', function() {
-            if (sideFilter.classList.contains('js-side-filter--active')) {
+            if (sideFilter.classList.contains('js-accordion--active')) {
                 // Если элемент уже раскрыт
-                sideFilter.classList.remove('js-side-filter--active');
+                sideFilter.classList.remove('js-accordion--active');
                 sideFilter.style.maxHeight = null;
                 
                 setAntonimWord(sideFilterTrigger);
             } else {
                 // Если элемент свернут
-                sideFilter.classList.add('js-side-filter--active');
+                sideFilter.classList.add('js-accordion--active');
                 sideFilter.style.maxHeight = sideFilter.scrollHeight + 'px';
                 
                 setAntonimWord(sideFilterTrigger);
-            }
-
-            function setAntonimWord(elm) {
-                if (!elm.dataset.antonim) return;
-
-                var prevText = elm.textContent;
-                elm.textContent = elm.dataset.antonim;
-                elm.dataset.antonim = prevText;
             }
         });
     }
     /* .End */
 
+
+    /* Установить селектор родителю */
+    const buttonsToSetSelector = document.querySelectorAll('.js-parent-selector-toggle');
+
+    for (let i = 0; i < buttonsToSetSelector.length; i++) {
+        buttonsToSetSelector[i].addEventListener('click', function(e) {
+            if (e.currentTarget.dataset.selector) {
+                e.currentTarget.parentElement.classList.toggle(e.currentTarget.dataset.selector);
+            }
+
+            setAntonimWord(e.currentTarget);
+        });
+    }
+
+    /* .End */
+
+    function setAntonimWord(elm) {
+        if (!elm.dataset.antonim) return;
+
+        var prevText = elm.textContent;
+        elm.textContent = elm.dataset.antonim;
+        elm.dataset.antonim = prevText;
+    }
 })(document);

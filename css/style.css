@@ -2208,97 +2208,6 @@ img {
     border-radius: 3px;
 }
 
-/* CUSTOM TABLE */
-.custom-table {
-    display: block;
-    width: 100%;
-}
-
-.custom-table__heads {
-    display: flex;
-    margin-bottom: 40px;
-}
-
-.custom-table__head {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 400;
-}
-
-.custom-table__col {
-    flex-shrink: 0;
-}
-
-.custom-table__contents p {
-    margin: 0px;
-}
-
-.custom-table__row {
-    display: flex;
-    padding: 20px 0px;
-    border-bottom: 1px solid #f0f0f4;
-}
-
-/* PICKUP TABLE MODIFE CUSTOM TABLE */
-.product-pickup__table {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-.product-pickup__contents p {
-    color: #7c7d81;
-    font-size: 16px;
-    line-height: 19px;
-}
-
-.product-pickup__col--work-time p {
-    margin-bottom: 8px;
-}
-
-.product-pickup__col--work-time p:last-child {
-    margin-bottom: 0px;
-}
-
-.product-pickup__col--work-time p span:first-child {
-    display: inline-block;
-    width: 55px;
-}
-
-.product-pickup__col:nth-of-type(1) {
-    flex-basis: 320px;
-    padding-right: 40px;
-}
-
-.product-pickup__col:nth-of-type(2) {
-    flex-basis: 250px;
-}
-
-.product-pickup__col:nth-of-type(3) {
-    flex-basis: 215px;
-}
-
-.product-pickup__col:nth-of-type(4) {
-    flex-basis: 215px;
-}
-
-.product-pickup__col:nth-of-type(5) {
-    margin-left: auto;
-}
-
-.product-pickup__col--buy {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    transform: translateY(-25%);
-}
-
-.product-pickup__button-buy {
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.12em;
-    padding: 10px 40px 9px;
-}
-
 /* Mobile Side Menu */
 .side-menu-mob {
     position: fixed;
@@ -2387,3 +2296,119 @@ img {
 .side-menu-mob__list-item--delivery::after {
     background-image: url('../images/icon-package.svg');
 }
+
+/* PICKUP TABLE */
+
+.product-pickup__table {
+    margin-top: 45px;
+}
+
+.pickup-table__row {
+    display: flex;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 15px;
+}
+
+.pickup-table__row:nth-of-type(1n + 2) .pickup-table__cell-caption {
+    display: none;
+}
+
+.pickup-table__row:nth-of-type(1n + 2) {
+    margin-top: 20px;
+}
+
+.pickup-table__cell {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px 20px 0px 0px;
+}
+
+.pickup-table__cell--address {
+    max-width: 300px;
+}
+
+.pickup-table__cell--time {
+    max-width: 260px;
+}
+
+.pickup-table__cell--instock {
+    max-width: 200px;
+}
+
+.pickup-table__cell--amount {
+    max-width: 120px;
+}
+
+.pickup-table__cell--buy {
+    padding: 0px;
+}
+
+.pickup-table__cell-caption {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px 0px 35px 0px;
+}
+
+.pickup-table__cell-content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #303136b3;
+}
+
+.pickup-table__work-time {
+    margin: 0px;
+}
+
+.pickup-table__work-time-info {
+    display: block;
+}
+
+.pickup-table__work-days {
+    display: inline-block;
+    width: 60px;
+}
+
+.pickup-table__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pickup-table__buy {
+    padding: 10px 40px 9px;
+    margin: 0px 0px 0px auto;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.pickup-table__row:first-of-type .pickup-table__buy {
+    margin: 50px 0px 0px auto;
+}
+
+.pickup-table__show-btn {
+    position: relative;
+    display: none;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 2px;
+    margin-top: 20px;
+    color: #1c62cd;
+    border-bottom: 1px solid #1c62cd;
+}
+
+.pickup-table__show-btn::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    left: calc(100% + 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../images/drop-arrow-blue.svg') no-repeat center;
+    background-size: cover;
+}
+
+.pickup-table--show-all .pickup-table__show-btn::after {
+    transform: translateY(-50%) rotate(0.5turn);
+}
+

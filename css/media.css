@@ -106,16 +106,12 @@
         margin-right: 50px;
     }
 
-    .product-pickup__col:nth-of-type(1) {
-        flex-basis: 270px;
+    .product-page__title {
+        padding-right: 40px;
     }
 
-    .product-pickup__col:nth-of-type(4) {
-        flex-basis: 175px;
-    }
-    
-    .product-pickup__col:nth-of-type(3) {
-        flex-basis: 185px;
+    .product-page__quick-info {
+        width: 100%;
     }
 }
 
@@ -133,16 +129,8 @@
         margin-left: 8px;
     }
 
-    .product-pickup__col:nth-of-type(1) {
-        flex-basis: 250px;
-    }
-
-    .product-pickup__col:nth-of-type(4) {
-        flex-basis: 155px;
-    }
-    
-    .product-pickup__col:nth-of-type(3) {
-        flex-basis: 165px;
+    .pickup-table__cell--instock {
+        max-width: 180px;
     }
 }
 
@@ -264,6 +252,15 @@
 
     .product-pickup__options {
         margin-left: 100px;
+    }
+
+    .product-page__quick-info {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .product-page__title {
+        padding-right: 0px;
     }
 }
 
@@ -535,40 +532,84 @@
         padding: 20px;
     }
 
-    .product-pickup__col:nth-of-type(1) {
-        flex-basis: 220px;
-    }
-
-    .product-pickup__col:nth-of-type(2) {
-        flex-basis: 210px;
-    }
-
-    .product-pickup__col:nth-of-type(4) {
-        flex-basis: 135px;
-    }
-
-    .find-magazine__field {
-        width: 220px;
-    }
-
     .product-pickup__checkbox .input-replacer__label-text {
         font-size: 16px;
     }
-
-    .custom-table__head {
-        font-size: 18px;
-        line-height: 22px;
-    }
-
-    .product-pickup__contents p {
-        font-size: 15px;
-        line-height: 16px;
-    }
 }
 
-@media screen and (max-width: 915px) {
-    .product-pickup__table {
+@media screen and (max-width: 940px) {
+    .pickup-table__row {
+        flex-direction: column;
+    }
+
+    .pickup-table:not(.pickup-table--show-all) .pickup-table__row:nth-of-type(1n + 2) {
+        display: none;
+    }
+
+
+    .pickup-table__cell {
         display: flex;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+        margin: 0px auto;
+        padding: 5px 0px;
+    }
+
+    .pickup-table__cell--buy {
+        justify-content: stretch;
+    }
+
+    .pickup-table__cell--buy .pickup-table__cell-content {
+        flex-grow: 1;
+    }    
+
+    .pickup-table__cell-caption {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .pickup-table__row:nth-of-type(1n + 2) .pickup-table__cell-caption {
+        display: block;
+    }
+
+    .pickup-table__row:first-of-type .pickup-table__buy {
+        margin: 0px auto 0px;
+    }
+
+    .pickup-table__btn-wrapper {
+        justify-content: center;
+    }
+
+    .pickup-table__buy {
+        padding: 17px 20px 15px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0px auto;
+    }
+
+    .pickup-table__show-btn {
+        display: inline-block;
+    }
+
+    .product-pickup__form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-pickup__options {
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+
+    .find-magazine {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .find-magazine__field {
+        width: 100%;
     }
 }
 
@@ -698,6 +739,23 @@
         width: 100%;
         max-width: 280px;
         margin: 30px auto 0px;
+    }
+
+    .product-info-block__tabs {
+        display: block;
+        white-space: nowrap;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 15px 12px;
+    }
+
+    .product-info-block__tab {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .product-info-block__tab + .product-info-block__tab {
+        margin-left: 15px;
     }
 }
 
@@ -984,6 +1042,41 @@
     .pagination__item {
         height: 35px;
         width: 35px;
+    }
+
+    .product-pickup__options {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .product-pickup__checkbox {
+        width: 100%;
+        margin-right: 0px;
+        padding: 5px 10px 5px 0px;
+        border-bottom: 1px solid #c4c4c4;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .product-pickup__checkbox:last-child {
+        margin-top: 15px;
+    }
+
+    .pickup-table__cell-caption {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        font-family: 'SF-Medium', sans-serif;
+    }
+    
+    .product-info-block__tabs {
+        padding: 15px 10px 12px;
+    }
+
+    .product-info-block__tab {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 

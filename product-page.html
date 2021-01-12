@@ -192,7 +192,11 @@
               Отзывы
             </div>
             <div class="product-info-block__content js-tab-content js-tab-content--active" id="js-content-pickup">
+              
+              
+              <!-- ТАБЛИЦА -->
               <div class="product-pickup product-info-block__pickup">
+                  <!-- ШАПКА ТАБЛИЦЫ -->
                   <div class="product-pickup__top">
                     <form class="product-pickup__form" action="" method="POST">
                       <div class="find-magazine">
@@ -217,88 +221,148 @@
                       </div>
                     </form>
                   </div>
-                  <div class="custom-table product-pickup__table">
-                    <div class="custom-table__heads">
-                      <h4 class="custom-table__head custom-table__col product-pickup__col">Адрес</h4>
-                      <h4 class="custom-table__head custom-table__col product-pickup__col">Режим работы</h4>
-                      <h4 class="custom-table__head custom-table__col product-pickup__col">Доступно</h4>
-                      <h4 class="custom-table__head custom-table__col product-pickup__col">Количество</h4>
-                    </div>
-                    <div class="custom-table__contents product-pickup__contents">
-                      <div class="custom-table__row">
-                        <div class="custom-table__col product-pickup__col product-pickup__col--addres">
-                          <p>Москва, ул. Науки 25</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--work-time">
-                          <p><span>пн-сб:</span> <span>08:00-19:00</span></p>
-                          <p><span>вс:</span> <span>09:00-17:00</span></p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--available">
-                          <p>В наличии</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--amount">
-                          <p>1</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--buy">
-                          <button class="button-buy product-pickup__button-buy">Купить</button>
+
+                  <!-- САМА ТАБЛИЦА -->
+                  <div class="pickup-table product-pickup__table">
+                    <div class="pickup-table__row">
+                      <div class="pickup-table__cell pickup-table__cell--address">
+                        <div class="pickup-table__cell-caption">Адрес</div>
+                        <div class="pickup-table__cell-content">Москва, ул. Науки 25</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--time">
+                        <div class="pickup-table__cell-caption">Режим работы</div>
+                        <div class="pickup-table__cell-content">
+                          <p class="pickup-table__work-time">
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">пн-сб:</span> <span class="pickup-table__work-hours">08:00-19:00</span>
+                            </span>
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">вс:</span> <span class="pickup-table__work-hours">09:00-17:00</span>
+                            </span>
+                          </p>
                         </div>
                       </div>
-                      <div class="custom-table__row">
-                        <div class="custom-table__col product-pickup__col product-pickup__col--addres">
-                          <p>Москва, ул. Южная 134</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--work-time">
-                          <p><span>пн-сб:</span> <span>08:00-19:00</span></p>
-                          <p><span>вс:</span> <span>09:00-17:00</span></p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--available">
-                          <p>В наличии</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--amount">
-                          <p>2</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--buy">
-                          <button class="button-buy product-pickup__button-buy">Купить</button>
-                        </div>
+                      <div class="pickup-table__cell pickup-table__cell--instock">
+                        <div class="pickup-table__cell-caption">Доступно</div>
+                        <div class="pickup-table__cell-content">В наличии</div>
                       </div>
-                      <div class="custom-table__row">
-                        <div class="custom-table__col product-pickup__col product-pickup__col--addres">
-                          <p>Санкт-Петербург, ул. Красная 19</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--work-time">
-                          <p><span>пн-сб:</span> <span>08:00-19:00</span></p>
-                          <p><span>вс:</span> <span>09:00-17:00</span></p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--available">
-                          <p>Нет в наличии</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--amount">
-                          <p>0</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--buy">
-                          <button class="button-buy product-pickup__button-buy">Купить</button>
-                        </div>
+                      <div class="pickup-table__cell pickup-table__cell--amount">
+                        <div class="pickup-table__cell-caption">Количество</div>
+                        <div class="pickup-table__cell-content">1</div>
                       </div>
-                      <div class="custom-table__row">
-                        <div class="custom-table__col product-pickup__col product-pickup__col--addres">
-                          <p>Киев, ул Шевченко 167</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--work-time">
-                          <p><span>пн-сб:</span> <span>08:00-19:00</span></p>
-                          <p><span>вс:</span> <span>09:00-17:00</span></p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--available">
-                          <p>Нет в наличии</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--amount">
-                          <p>0</p>
-                        </div>
-                        <div class="custom-table__col product-pickup__col product-pickup__col--buy">
-                          <button class="button-buy product-pickup__button-buy">Купить</button>
+                      <div class="pickup-table__cell pickup-table__cell--buy">
+                        <div class="pickup-table__cell-content">
+                          <div class="pickup-table__btn-wrapper">
+                            <button class="button-buy pickup-table__buy">Купить</button>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="pickup-table__row">
+                      <div class="pickup-table__cell pickup-table__cell--address">
+                        <div class="pickup-table__cell-caption">Адрес</div>
+                        <div class="pickup-table__cell-content">Москва, ул.  Южная 134</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--time">
+                        <div class="pickup-table__cell-caption">Режим работы</div>
+                        <div class="pickup-table__cell-content">
+                          <p class="pickup-table__work-time">
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">пн-сб:</span> <span class="pickup-table__work-hours">08:00-19:00</span>
+                            </span>
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">вс:</span> <span class="pickup-table__work-hours">09:00-17:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--instock">
+                        <div class="pickup-table__cell-caption">Доступно</div>
+                        <div class="pickup-table__cell-content">В наличии</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--amount">
+                        <div class="pickup-table__cell-caption">Количество</div>
+                        <div class="pickup-table__cell-content">2</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--buy">
+                        <div class="pickup-table__cell-content">
+                          <div class="pickup-table__btn-wrapper">
+                            <button class="button-buy pickup-table__buy">Купить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pickup-table__row pickup-table__row--empty">
+                      <div class="pickup-table__cell pickup-table__cell--address">
+                        <div class="pickup-table__cell-caption">Адрес</div>
+                        <div class="pickup-table__cell-content">Санкт-Петербург, ул. Красная 19</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--time">
+                        <div class="pickup-table__cell-caption">Режим работы</div>
+                        <div class="pickup-table__cell-content">
+                          <p class="pickup-table__work-time">
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">пн-сб:</span> <span class="pickup-table__work-hours">08:00-19:00</span>
+                            </span>
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">вс:</span> <span class="pickup-table__work-hours">09:00-17:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--instock">
+                        <div class="pickup-table__cell-caption">Доступно</div>
+                        <div class="pickup-table__cell-content">Нет в наличии</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--amount">
+                        <div class="pickup-table__cell-caption">Количество</div>
+                        <div class="pickup-table__cell-content">0</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--buy">
+                        <div class="pickup-table__cell-content">
+                          <div class="pickup-table__btn-wrapper">
+                            <button class="button-buy pickup-table__buy">Купить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pickup-table__row pickup-table__row--empty">
+                      <div class="pickup-table__cell pickup-table__cell--address">
+                        <div class="pickup-table__cell-caption">Адрес</div>
+                        <div class="pickup-table__cell-content">Киев, ул. Шевченко 167</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--time">
+                        <div class="pickup-table__cell-caption">Режим работы</div>
+                        <div class="pickup-table__cell-content">
+                          <p class="pickup-table__work-time">
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">пн-сб:</span> <span class="pickup-table__work-hours">08:00-19:00</span>
+                            </span>
+                            <span class="pickup-table__work-time-info">
+                              <span class="pickup-table__work-days">вс:</span> <span class="pickup-table__work-hours">09:00-17:00</span>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--instock">
+                        <div class="pickup-table__cell-caption">Доступно</div>
+                        <div class="pickup-table__cell-content">Нет в наличии</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--amount">
+                        <div class="pickup-table__cell-caption">Количество</div>
+                        <div class="pickup-table__cell-content">0</div>
+                      </div>
+                      <div class="pickup-table__cell pickup-table__cell--buy">
+                        <div class="pickup-table__cell-content">
+                          <div class="pickup-table__btn-wrapper">
+                            <button class="button-buy pickup-table__buy">Купить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="pickup-table__show-btn js-parent-selector-toggle" data-selector="pickup-table--show-all" data-antonim="Свернуть список">Показать все магазины</button>
                   </div>
+                </div>
               </div>
             </div>
             <div class="product-info-block__content js-tab-content" id="js-content-delivery">
